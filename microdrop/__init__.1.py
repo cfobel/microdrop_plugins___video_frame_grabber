@@ -38,5 +38,9 @@ class VideoFrameGrabber(Plugin):
     def __init__(self):
         self.name = self.plugins_name
 
+    def on_step_swapped(self, original_step_number, new_step_number):
+        print '[VideoFrameGrabber] on_step_swapped():'\
+                'step %d -> %d' % (original_step_number, new_step_number)
+
 
 PluginGlobals.pop_env()
